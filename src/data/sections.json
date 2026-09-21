@@ -3,6 +3,9 @@
     "currentSection": "Productos",
     "sectionTitle": "Colección completa"
   },
+  "/productos/:slug": {
+    "currentSection": "Productos"
+  },
   "/contacto": {
     "currentSection": "Contacto",
     "sectionTitle": "Hablemos"

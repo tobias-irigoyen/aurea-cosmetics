@@ -6,6 +6,7 @@
     "category": "Tratamiento",
     "description": "Sérum con vitamina C al 15% para un brillo uniforme y homogéneo.",
     "price": 89,
+    "stock": 89,
     "badge": null,
     "image": "https://images.unsplash.com/photo-1748543668646-e81cda0890f3?w=800&h=1000&fit=crop&auto=format"
   },
@@ -16,6 +17,7 @@
     "category": "Hidratación",
     "description": "Hidratación intensa con ceramidas y manteca de karité durante 72 horas.",
     "price": 74,
+    "stock": 74,
     "badge": null,
     "image": "https://images.unsplash.com/photo-1772191530787-b9546da02fbc?w=800&h=1000&fit=crop&auto=format"
   },
@@ -26,6 +28,7 @@
     "category": "Tratamiento",
     "description": "Aceite seco con rosa de mosqueta y escualano para la renovación celular.",
     "price": 95,
+    "stock": 95,
     "badge": "Nuevo",
     "image": "https://images.unsplash.com/photo-1774682060997-f8959850a7d4?w=800&h=1000&fit=crop&auto=format"
   },
@@ -36,6 +39,7 @@
     "category": "Tratamiento",
     "description": "Tónico botánico que equilibra el pH y prepara la piel para los activos.",
     "price": 58,
+    "stock": 58,
     "badge": null,
     "image": "https://images.unsplash.com/photo-1782687529451-502c24091a0c?w=800&h=1000&fit=crop&auto=format"
   },
@@ -46,6 +50,7 @@
     "category": "Limpieza",
     "description": "Mascarilla de arcilla con carbón activado y lavanda. Poros minimizados.",
     "price": 65,
+    "stock": 65,
     "badge": null,
     "image": "https://images.unsplash.com/photo-1785581778868-79100f7fe56c?w=800&h=1000&fit=crop&auto=format"
   },
@@ -56,6 +61,7 @@
     "category": "Esencias",
     "description": "Elixir nocturno con bakuchiol y péptidos de seda para la regeneración celular.",
     "price": 110,
+    "stock": 110,
     "badge": "Premium",
     "image": "https://images.unsplash.com/photo-1772191399367-91ed8d95664b?w=800&h=1000&fit=crop&auto=format"
   },
@@ -76,6 +82,7 @@
     "category": "Esencias",
     "description": "Fragancia floral con notas de rosa de Damasco, jazmín y sándalo blanco.",
     "price": 98,
+    "stock": 98,
     "badge": "Edición Limitada",
     "image": "https://images.unsplash.com/photo-1630573133526-8d090e0269af?w=800&h=1000&fit=crop&auto=format"
   }

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
+import { useState } from 'react';
 
 const ProductCard = ({ product }) => {
   const {
@@ -8,11 +9,29 @@ const ProductCard = ({ product }) => {
     category,
     description,
     price,
+    stock,
     currency,
     badge,
     image,
     slug,
   } = product;
+
+  const [counter, setCount] = useState(0);
+
+  const increaseCount = () => {
+    if (counter < stock) {
+      setCount(counter + 1);
+    }
+  };
+
+  const decreaseCount = () => {
+    if (counter > 0 ) {
+      setCount(counter - 1);
+    }
+  };
+  const showBuy = () => {
+    console.log(name)
+  }
 
   return (
     <article className="product-card">
@@ -29,26 +48,34 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="product-card__content">
-        <span className="product-card__category">
-          {category}
-        </span>
+        <div class="product-card__info">
+          <span className="product-card__category">
+            {category}
+          </span>
+          <span className="product-card__category product-card__stock">
+            Stock: {stock}
+          </span>
+        </div>
 
         <h2 className="product-card__title">
           {name}
         </h2>
+          <span className="product-card__price">
+            ${price}
+          </span>
 
         <p className="product-card__description">
           {description}
         </p>
 
         <div className="product-card__footer">
-          <span className="product-card__price">
-            ${price}
-          </span>
+          <div className="product-card__buy-counters">
+            <button className="product-card__button" onClick={decreaseCount}>-</button>
+            <span>{ counter }</span>
+            <button className="product-card__button" onClick={increaseCount}>+</button>
+          </div>
+          <button className="product-card__button product-card__buy-button" onClick={showBuy}>Comprar</button>
 
-          <button className="product-card__button">
-            AÑADIR
-          </button>
         </div>
       </div>
     </article>

@@ -8,6 +8,7 @@ import Contact from "@/views/Contact/Contact";
 import MainContainer from "@/components/MainContainer/MainContainer";
 
 import sections from "@/data/sections.json";
+import products from "@/data/products.json";
 
 import "@/App.css";
 
@@ -18,9 +19,25 @@ import {
   useLocation
 } from "react-router-dom";
 
+
 function AppContent() {
   const location = useLocation();
-  const section = sections[location.pathname];
+
+  let section = sections[location.pathname];
+
+  if (location.pathname.startsWith("/productos/")) {
+    const slug = location.pathname.split("/")[2];
+
+    const product = products.find(
+      (product) => product.slug === slug
+    );
+
+    section = {
+      currentSection: "Productos",
+      currentProduct: product ? product.name : "Producto",
+      sectionTitle: product ? product.name : "Producto",
+    };
+  }  
 
   return (
     <>
@@ -28,9 +45,10 @@ function AppContent() {
 
       {section && (
         <SectionHeader
-          currentSection={section.currentSection}
-          sectionTitle={section.sectionTitle}
-        />
+  currentSection={section.currentSection}
+  currentProduct={section.currentProduct}
+  sectionTitle={section.sectionTitle}
+/>
       )}
 
       <MainContainer>

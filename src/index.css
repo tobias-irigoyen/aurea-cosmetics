@@ -21,6 +21,11 @@ body,
   height: 100%;
 }
 
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #E2DAD0 transparent;
+}
+
 body {
   background-color: #fafaf8f2;
   color: #16160E;
@@ -37,9 +42,8 @@ h6 {
   font-family: var(--font-heading);
 }
 
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #E2DAD0 transparent;
+a {
+  color: #16160E;
 }
 
 

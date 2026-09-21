@@ -1,7 +1,7 @@
 import "./Products.scss";
 import products from "../../data/products.json";
 import ProductCard from "../../components/ui/products/ProductCard/ProductCard";
-import Breadcrumbs from "../../components/ui/Breadcrumbs/Bradcrumbs";
+import Breadcrumbs from "../../components/ui/BreadCrumbs/BreadCrumbs";
 import SectionHeader from "../../components/ui/SectionHeader/SectionHeader";
 
 const Products = () => {

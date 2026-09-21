@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import products from "../../data/products.json";
+import SectionHeader from "../../components/ui/SectionHeader/SectionHeader";
 
 function ProductDetail() {
 
-  const { id } = useParams();
+const { slug } = useParams();
 
   const product = products.find(
     (product) => product.slug === product.slug
@@ -33,6 +34,7 @@ function ProductDetail() {
 
     </div>
   );
+
 }
 
 export default ProductDetail;
