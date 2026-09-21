@@ -16,17 +16,21 @@ const ProductCard = ({ product }) => {
     slug,
   } = product;
 
-  const [counter, setCount] = useState(0);
+  const [productQty, setProductQty] = useState(0);
+  const [isFav, setFav] = useState(false);
 
-  const increaseCount = () => {
-    if (counter < stock) {
-      setCount(counter + 1);
+const toggleFav = () => {
+  setFav(!isFav);
+};
+  const increaseProductsQty = () => {
+    if (productQty < stock) {
+      setProductQty(productQty + 1);
     }
   };
 
-  const decreaseCount = () => {
-    if (counter > 0 ) {
-      setCount(counter - 1);
+  const decreaseProductsQty = () => {
+    if (productQty > 0 ) {
+      setProductQty(productQty - 1);
     }
   };
   const showBuy = () => {
@@ -48,7 +52,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="product-card__content">
-        <div class="product-card__info">
+        <div className="product-card__info">
           <span className="product-card__category">
             {category}
           </span>
@@ -67,15 +71,21 @@ const ProductCard = ({ product }) => {
         <p className="product-card__description">
           {description}
         </p>
+        
+          {/*}
+          <button 
+          className="product-card__button product-card__toggle-fav-button" onClick={toggleFav}>
+            {isFav ? "Quitar de favoritos ★" : "Agregar a favoritos ☆"}
+          </button>
+          {*/}
 
         <div className="product-card__footer">
           <div className="product-card__buy-counters">
-            <button className="product-card__button" onClick={decreaseCount}>-</button>
-            <span>{ counter }</span>
-            <button className="product-card__button" onClick={increaseCount}>+</button>
+            <button className="product-card__button" onClick={decreaseProductsQty}>-</button>
+            <span>{ productQty }</span>
+            <button className="product-card__button" onClick={increaseProductsQty}>+</button>
           </div>
-          <button className="product-card__button product-card__buy-button" onClick={showBuy}>Comprar</button>
-
+          <button className="product-card__button product-card__buy-button" onClick={showBuy}>Añadir al carrito</button>
         </div>
       </div>
     </article>
