@@ -1,0 +1,34 @@
+
+.header nav h1{
+    letter-spacing: .22rem;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header ul {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header ul li {
+    list-style-type: none;
+}
+.header ul li a {
+    color: var(--color-dim);
+    text-decoration: none;
+}
+.header ul li a:hover {
+    color: var(--color-ink);
+}

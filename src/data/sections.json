@@ -1,0 +1,10 @@
+{
+  "/productos": {
+    "currentSection": "Productos",
+    "sectionTitle": "Colección completa"
+  },
+  "/contacto": {
+    "currentSection": "Contacto",
+    "sectionTitle": "Hablemos"
+  }
+}
