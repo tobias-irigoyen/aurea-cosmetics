@@ -32,3 +32,10 @@ header nav {
 .header ul li a:hover {
     color: var(--color-ink);
 }
+
+.header .shopping-bag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+} 

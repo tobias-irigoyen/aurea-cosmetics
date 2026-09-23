@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import { useState } from 'react';
+import { useCart } from "@/context/CartContext";
 
 const ProductCard = ({ product }) => {
   const {
@@ -18,6 +19,7 @@ const ProductCard = ({ product }) => {
 
   const [productQty, setProductQty] = useState(0);
   const [isFav, setFav] = useState(false);
+  const { addToCart } = useCart();
 
 const toggleFav = () => {
   setFav(!isFav);
@@ -33,9 +35,9 @@ const toggleFav = () => {
       setProductQty(productQty - 1);
     }
   };
-  const showBuy = () => {
-    console.log(name)
-  }
+ const showBuy = () => {
+  addToCart(product, productQty);
+};
 
   return (
     <article className="product-card">

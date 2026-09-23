@@ -1,8 +1,15 @@
 import "./NavBar.css";
 import { Search, UserRound, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useCart } from "@/context/CartContext";
 
 const NavBar = () => {
+  const { items } = useCart();
+
+const cartQuantity = items.reduce(
+  (total, item) => total + item.quantity,
+  0
+);
   return (
     <nav>
       <h1>Áurea</h1>
@@ -31,9 +38,10 @@ const NavBar = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/carrito-de-compras" className="shopping-bag">
             <span className="sr-only">Carrito de compras</span>
             <ShoppingBag />
+            <span>({cartQuantity})</span>
           </a>
         </li>
       </ul>

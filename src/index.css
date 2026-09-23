@@ -88,3 +88,41 @@ a {
   left: -2000px;
   top: -2000px;
 }
+
+.text-xs {
+  font-size: 12px;
+}
+
+.primary-button {
+    width: 100%;
+    height: 36px!important;
+    background-color: #1C3128;
+    color: #FFF;
+    padding: 10px 17px;
+    border: 1px solid #222222;
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.primary-button:hover {  
+  background-color: #000;
+}
+.secondary-button:hover {
+  color: #000;
+}
+
+.tertiary-button {
+  font-family: var(--font-sans);
+  background-color: transparent;
+  color: #8A8378;
+  padding: 10px 17px;
+  letter-spacing: 1.2px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+

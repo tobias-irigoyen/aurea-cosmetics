@@ -2,10 +2,12 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import SectionHeader from "@/components/ui/SectionHeader/SectionHeader";
 import Home from "@/views/Home/Home";
+import CartView from "@/views/Cart/CartView";
 import Products from "@/views/Products/Products";
 import ProductDetail from "@/views/ProductDetail/ProductDetail";
 import Contact from "@/views/Contact/Contact";
 import MainContainer from "@/components/MainContainer/MainContainer";
+import { CartProvider } from "./context/CartContext";
 
 import sections from "@/data/sections.json";
 import products from "@/data/products.json";
@@ -41,6 +43,7 @@ function AppContent() {
 
   return (
     <>
+    <CartProvider>
       <Header />
 
       {section && (
@@ -57,10 +60,12 @@ function AppContent() {
           <Route path="/productos" element={<Products />} />
           <Route path="/productos/:slug" element={<ProductDetail />} />
           <Route path="/contacto" element={<Contact />} />
+          <Route path="/carrito-de-compras" element={<CartView />} />
         </Routes>
       </MainContainer>
 
       <Footer />
+    </CartProvider>
     </>
   );
 }
