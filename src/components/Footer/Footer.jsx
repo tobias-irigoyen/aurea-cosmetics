@@ -27,14 +27,14 @@ const Footer = () => {
             <li><Link to="/">Prensa</Link></li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col assistants-col">
           <h3>Equipo</h3>
           <ul>
-            <li>
               {assistants.map((assistant) => (
-                <Assistant key={assistant.name} name={assistant.name} role={assistant.role} email={assistant.email} picture={assistant.picture} />
+                <li key={assistant.name}>
+                  <Assistant  name={assistant.name} role={assistant.role} email={assistant.email} picture={assistant.picture} />
+                </li>
                 ))}
-              </li>
           </ul>
         
           </div>

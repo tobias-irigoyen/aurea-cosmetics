@@ -47,29 +47,27 @@ function AppContent() {
 
   return (
     <>
-      <CartProvider>
-        <Header />
+      <Header />
 
-        {section && (
-          <SectionHeader
-            currentSection={section.currentSection}
-            currentProduct={section.currentProduct}
-            sectionTitle={section.sectionTitle}
-          />
-        )}
+      {section && (
+        <SectionHeader
+          currentSection={section.currentSection}
+          currentProduct={section.currentProduct}
+          sectionTitle={section.sectionTitle}
+        />
+      )}
 
-        <MainContainer>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/productos" element={<Products />} />
-            <Route path="/productos/:slug" element={<ProductDetail />} />
-            <Route path="/contacto" element={<Contact />} />
-            <Route path="/carrito-de-compras" element={<CartView />} />
-          </Routes>
-        </MainContainer>
-        <ProductFormContainer />
-        <Footer />
-      </CartProvider>
+      <MainContainer>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/productos" element={<Products />} />
+          <Route path="/productos/:slug" element={<ProductDetail />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/carrito-de-compras" element={<CartView />} />
+        </Routes>
+      </MainContainer>
+      <ProductFormContainer />
+      <Footer />
     </>
   );
 }
@@ -77,7 +75,9 @@ function AppContent() {
 function App() {
   return (
     <BrowserRouter>
-      <AppContent />
+      <CartProvider>
+        <AppContent />
+      </CartProvider>
     </BrowserRouter>
   );
 }

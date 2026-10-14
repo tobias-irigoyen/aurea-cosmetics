@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer, useMemo, useCallback } from "react";
 
 const CartContext = createContext();
 
@@ -96,41 +96,34 @@ export function CartProvider({ children }) {
     );
   }, [state.items]);
 
-  const addToCart = (product, quantity) => {
-    // Evita agregar cantidades inválidas
+  const addToCart = useCallback((product, quantity) => {
     if (quantity <= 0) return;
-
     dispatch({
       type: "ADD_TO_CART",
-      payload: {
-        product,
-        quantity,
-      },
+      payload: { product, quantity },
     });
-  };
+  }, []);
 
-  const removeFromCart = (productId) => {
+  const removeFromCart = useCallback((productId) => {
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: productId,
     });
-  };
+  }, []);
 
-  const clearCart = () => {
-    dispatch({
-      type: "CLEAR_CART",
-    });
-  };
+  const clearCart = useCallback(() => {
+    dispatch({ type: "CLEAR_CART" });
+  }, []);
+
+  const value = useMemo(() => ({
+    items: state.items,
+    addToCart,
+    removeFromCart,
+    clearCart,
+  }), [state.items, addToCart, removeFromCart, clearCart]);
 
   return (
-    <CartContext.Provider
-      value={{
-        items: state.items,
-        addToCart,
-        removeFromCart,
-        clearCart,
-      }}
-    >
+    <CartContext.Provider value={value}>
       {children}
     </CartContext.Provider>
   );

@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
 function Contact() {
   return (
-      <h1>Contacto</h1>
+      <h1 className="sr-only">Contacto</h1>
   );
 }
 
