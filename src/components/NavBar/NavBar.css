@@ -3,6 +3,7 @@
     letter-spacing: .22rem;
     text-transform: uppercase;
     font-size: 1.25rem;
+    color: #16160E;
 }
 header nav {
     display: flex;

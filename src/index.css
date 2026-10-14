@@ -19,6 +19,9 @@ html,
 body,
 #root {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #716b65;
 }
 
 html {
@@ -40,6 +43,10 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
+  color: #171717;
+}
+label {
+  color: #171717;
 }
 
 a {

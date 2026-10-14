@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import { useState } from 'react';
 import { useCart } from "@/context/CartContext";
+import FilledHeart from '@/assets/filled-heart.svg'
+import EmptyHeart from '@/assets/empty-heart.svg'
 
 const ProductCard = ({ product }) => {
   const {
@@ -45,19 +47,24 @@ const toggleFav = () => {
         <Link to={`/productos/${slug}`}>
           <img src={image} alt={name} />
         </Link>
-
-        {badge && (
+          <div>
           <span className="product-card__badge">
-            {badge}
+            {category}
           </span>
-        )}
+
+          
+          <button 
+          className="product-card__fav-btn" onClick={toggleFav}>
+            <img src={isFav ? FilledHeart : EmptyHeart} alt={isFav ? "Quitar de favoritos" : "Agregar a favoritos"} />
+          </button>
+          <span >
+            
+          </span>
+          </div>
       </div>
 
       <div className="product-card__content">
         <div className="product-card__info">
-          <span className="product-card__category">
-            {category}
-          </span>
           <span className="product-card__category product-card__stock">
             Stock: {stock}
           </span>
@@ -74,13 +81,6 @@ const toggleFav = () => {
           {description}
         </p>
         
-          {/*}
-          <button 
-          className="product-card__button product-card__toggle-fav-button" onClick={toggleFav}>
-            {isFav ? "Quitar de favoritos ★" : "Agregar a favoritos ☆"}
-          </button>
-          {*/}
-
         <div className="product-card__footer">
           <div className="product-card__buy-counters">
             <button className="product-card__button" onClick={decreaseProductsQty}>-</button>
