@@ -85,16 +85,5 @@
     "stock": 98,
     "badge": "Edición Limitada",
     "image": "https://images.unsplash.com/photo-1630573133526-8d090e0269af?w=800&h=1000&fit=crop&auto=format"
-  },
-  {
-    "id": 9,
-    "slug": "eau-de-parfum-rosee",
-    "name": "Eau de Parfum Rosée",
-    "category": "Esencias",
-    "description": "Fragancia floral con notas de rosa de Damasco, jazmín y sándalo blanco.",
-    "price": 120000,
-    "stock": 98,
-    "badge": "Edición Limitada",
-    "image": "https://images.unsplash.com/photo-1785581778868-79100f7fe56c?w=800&h=1000&fit=crop&auto=format"
   }
 ]
