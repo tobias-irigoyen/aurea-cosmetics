@@ -18,6 +18,18 @@ const NavBar = () => {
       <Link to="/" className="navbar-logo">
         Áurea
       </Link>
+      <ul className="navbar-links">
+        <li>
+          <Link to="/">Inicio</Link>
+        </li>
+        <li>
+          <Link to="/productos">Productos</Link>
+        </li>
+        <li>
+          <Link to="contacto">Contacto</Link>
+        </li>
+      </ul>
+      
 
       <div className="navbar-actions">
         <a href="#" className="desktop-action" aria-label="Buscar">
@@ -28,7 +40,7 @@ const NavBar = () => {
         </a>
         <Link to="/carrito-de-compras" className="shopping-bag">
           <ShoppingBag />
-          Carrito
+          Carrito 
           <span>({cartQuantity})</span>
         </Link>
         <button
