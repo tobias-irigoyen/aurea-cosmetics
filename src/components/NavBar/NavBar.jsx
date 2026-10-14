@@ -28,6 +28,7 @@ const NavBar = () => {
         </a>
         <Link to="/carrito-de-compras" className="shopping-bag">
           <ShoppingBag />
+          Carrito
           <span>({cartQuantity})</span>
         </Link>
         <button
